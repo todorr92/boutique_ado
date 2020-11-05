@@ -5,6 +5,8 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+superusers = User.objects.filter(is_superuser=True)
+print(superusers)
 
 class UserProfile(models.Model):
     """
